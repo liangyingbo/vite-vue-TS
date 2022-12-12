@@ -1,6 +1,4 @@
-<script setup lang="ts">parseEnv
-import { onMounted } from 'vue';
-
+<script setup lang="ts">
 const props = defineProps<{
   modelValue: any
 }>()
