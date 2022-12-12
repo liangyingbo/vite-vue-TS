@@ -1,0 +1,1 @@
+const LayoutRouter  = [] as RouteRecordRaw[]

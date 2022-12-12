@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+      const p = new Promise((resolve,reject) =>{
+            resolve(false)
+      }).then(res=>{
+        if(res){
+            console.log('111')
+        }else{
+        //    console.log('222')
+        throw new Error('错误了')
+        //  return Promise.reject('异常')
+        }
+      }).catch(error =>{
+            console.log('error',error)
+      }).finally(()=>{
+        console.log('finally')
+      })
+
+ 
+     </script>
+</body>
+</html>
