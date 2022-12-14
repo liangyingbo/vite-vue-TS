@@ -12,7 +12,8 @@ export default [
         data: {
           age:'18',
           name: '蔡kimkim',
-          avatar:'images/avatar.jpg'
+          avatar:'images/avatar.jpg',
+          permissions:['article_edit','editor_markdown']
         },
       }
     },

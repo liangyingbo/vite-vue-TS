@@ -8,6 +8,6 @@ declare module 'vue-router' {
     menu?:IMenu,
     enterClass?:boolean,
     leaveClass?:boolean,
-    permission?:[]
+    permissions?:string
   }
 }
