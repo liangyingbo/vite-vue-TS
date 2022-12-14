@@ -56,7 +56,7 @@ import { RouteLocationNormalizedLoaded, RouteRecordName, RouteRecordRaw } from "
     }
 
     addHistoryMenu(route: RouteLocationNormalizedLoaded) {
-        console.log(route)
+        // console.log(route)
         if (!route.meta.menu) return;
         this.route.value = route
         const menu: IMenu = { ...route.meta.menu, route: route.name as string }

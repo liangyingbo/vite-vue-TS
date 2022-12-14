@@ -7,6 +7,7 @@ export interface User {
     permissions?:string[]
 }
 
+
 function info() {
     return http.request<User>({
         url: "user/info"
