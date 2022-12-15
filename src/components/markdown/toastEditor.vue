@@ -25,6 +25,7 @@ nextTick(() => {
     `${props.modelValue}`,
     `${props.height}px`
   );
+  toast.editor.setPlaceholder(props.placeholder)
   toast.editor.on("change", (type: string) => {
       emit(
       "update:modelValue",
@@ -33,7 +34,7 @@ nextTick(() => {
   });
 });
 </script>
-<style lang="scss" scoped>
+<style lang="scss">
 @import url("https://uicdn.toast.com/editor/latest/toastui-editor.min.css");
 
 #editor {
@@ -41,5 +42,15 @@ nextTick(() => {
   .toastui-editor-md-tab-container {
     display: none !important;
   }
+  
 }
+.fullscreen{
+    position: fixed;
+    height: 100vh;
+    top:0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: white;
+  }
 </style>

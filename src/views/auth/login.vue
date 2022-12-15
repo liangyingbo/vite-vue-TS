@@ -8,7 +8,7 @@
       <div class="p-6 flex flex-col justify-between items-center">
         <div class="w-full">
           <h2 class="text-center text-gray-700 text-lg mb-10">会员登录</h2>
-          <Form @submit="onSubmit">
+          <Form v-bind:submit="onSubmit">
             <Field
               value="admin@sina.com"
               name="account"
@@ -65,8 +65,8 @@ import utils from "@/utils";
 import { useRouter } from "vue-router";
  const { Form, Field, ErrorMessage } = v;
  // console.log(route.name)
-const onSubmit = async (value: IloginData) => {
-  utils.user.login(value);
+const onSubmit = async (values: IloginData) => {
+  utils.user.login(values);
 };
 </script>
 <style lang="scss" scoped></style>

@@ -13,11 +13,10 @@ export function setupPlugins(app: App) {
 
 
 function autoRegisterComponent(app: App) {
-    const components = import.meta.glob('../components/form/*.vue', { eager: true })
+    const components:any = import.meta.glob('../components/form/*.vue', { eager: true })
     Object.keys(components).forEach(key => {
         const name = key.split('/').pop()?.split('.')[0] as string
-
-        app.component(name, components[key]?.default)
-       
+        const module = components[key]?.default
+        app.component(name,module)
     })
 }

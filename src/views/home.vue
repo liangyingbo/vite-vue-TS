@@ -3,7 +3,7 @@
     class="w-screen h-screen bg-slate-600 flex flex-col justify-center items-center"
   >
     <img
-      src="images/avatar.jpg"
+      src="/images/avatar.jpg"
       class="w-36 h-36 rounded-full border-8 bg-white"
     />
     <div class="mt-4">
