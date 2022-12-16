@@ -11,3 +11,10 @@ declare namespace toastui {
         setHeight:(height:string) => void
     }
 }
+
+declare class wangEditor {
+    constructor(options:any)
+    config:{[key:string]:any}
+    create:()=>void
+    txt:{[key:string]}
+}
