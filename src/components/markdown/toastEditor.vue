@@ -1,5 +1,5 @@
 <template>
-  <div id="editor"></div>
+  <div id="markdown"></div>
 </template>
 
 <script setup lang="ts">
@@ -21,7 +21,7 @@ const emit = defineEmits(["update:modelValue"]);
 
 nextTick(() => {
   const toast = new ToastEditor(
-    "#editor",
+    "#markdown",
     `${props.modelValue}`,
     `${props.height}px`
   );
@@ -37,7 +37,7 @@ nextTick(() => {
 <style lang="scss">
 @import url("https://uicdn.toast.com/editor/latest/toastui-editor.min.css");
 
-#editor {
+#markdown {
   @apply bg-white px-2;
   .toastui-editor-md-tab-container {
     display: none !important;
