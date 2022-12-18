@@ -6,7 +6,8 @@ export default [
     response: () => {
       return {
         code: 0,
-        type: 'success',
+        status: 'success',
+        errno: 0,
         message: '上传成功',
         data: {
           url: 'images/avatar.jpg',

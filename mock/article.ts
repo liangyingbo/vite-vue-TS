@@ -7,7 +7,7 @@ export default [
     response: () => {
       return {
         code: 0,
-        type: 'success',
+        status: 'success',
         message: '请求成功',
         result: new Array(20).fill(undefined).map((item, index) => {
           return {

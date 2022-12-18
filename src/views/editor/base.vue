@@ -8,5 +8,5 @@
 <script lang="ts" setup>
  import { ref } from "vue";
 
-const content = ref('')
+const content = ref('<p>hello</p>')
 </script>

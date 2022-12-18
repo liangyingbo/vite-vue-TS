@@ -54,7 +54,7 @@ watch(route, () => menuService.setCurrentMenu(route), { immediate: true });
   }
   .container {
     dl {
-      @apply text-white mt-3 mx-4;
+      @apply text-white mt-6 mx-4;
       dt {
         @apply flex justify-between items-center cursor-pointer;
       }
@@ -75,8 +75,12 @@ watch(route, () => menuService.setCurrentMenu(route), { immediate: true });
       width: auto;
       .logo {
         @apply justify-center;
-        span {
+        span:nth-of-type(1){
+          margin: 0;
+        }
+        span:nth-of-type(2){
           @apply hidden;
+
         }
       }
       .container {
@@ -84,10 +88,10 @@ watch(route, () => menuService.setCurrentMenu(route), { immediate: true });
           @apply relative;
           dt {
             @apply justify-center;
-            & > div > span:nth-of-type(1) {
+            & > div > span:nth-of-type(2) {
               @apply hidden;
             }
-            & > div ~ i {
+            & > div ~ span {
               @apply hidden;
             }
           }

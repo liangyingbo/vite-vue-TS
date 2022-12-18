@@ -7,7 +7,7 @@ import { RouteLocationNormalizedLoaded, RouteRecordName, RouteRecordRaw } from "
  class Menu {  
     public menus = ref<IMenu[]>([])
     public historymenus = ref<IMenu[]>([])
-    public close = ref(false)
+    public close = ref(utils.store.get(CacheEnum.MENU_IS_CLOSE)?? false)
     public route = ref<null | RouteLocationNormalizedLoaded >(null)
     constructor() {
         this.menus.value = this.getMenusByRoute()
@@ -53,6 +53,7 @@ import { RouteLocationNormalizedLoaded, RouteRecordName, RouteRecordRaw } from "
 
     public toggleStateClose() {
         this.close.value = !this.close.value
+        utils.store.set(CacheEnum.MENU_IS_CLOSE,this.close.value)
     }
 
     addHistoryMenu(route: RouteLocationNormalizedLoaded) {

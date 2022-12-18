@@ -1,7 +1,7 @@
 interface ResponseResult<T> {
 [x: string]: any;
     code: number,
-    type: 'success' | 'error',
+    status: 'success' | 'error',
     message: string,
     data: T
 }

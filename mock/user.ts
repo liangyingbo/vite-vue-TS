@@ -7,7 +7,7 @@ export default [
     response: () => {
       return {
         code: 0,
-        type:'success',
+        status:'success',
         message:'请求成功',
         data: {
           age:'18',
@@ -24,7 +24,7 @@ export default [
     response: () => {
       return {
         code: 0,
-        type:'success',
+        status:'success',
         message:'请求成功',
         data: {
           token:Random.string(10)
