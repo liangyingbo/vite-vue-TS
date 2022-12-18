@@ -8,13 +8,16 @@
     />
     <div class="mt-4">
       <router-link :to="{ name: 'admin/home' }" class="hd-button mt-4"
-        >后台管理</router-link>
-      <router-link :to="{name:'login'}" class="hd-button hd-danger ml-3">会员登录</router-link>
+        >后台管理</router-link
+      >
+      <router-link :to="{ name: 'login' }" class="hd-button hd-danger ml-3"
+        >会员登录</router-link
+      >
     </div>
-
     <span class="text-gray-200 text-sm mt-3 font-mono shadow-md"
       >后盾人晚上8点直播，欢迎大家共同交流技术</span
     >
   </div>
 </template>
-<script setup lang="ts"></script>
+<script setup lang="ts">
+</script>

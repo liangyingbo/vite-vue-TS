@@ -1,31 +1,67 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-</head>
-<body>
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+      }
+
+      body {
+        padding: 200px;
+      }
+
+      article {
+        width: 400px;
+        height: 200px;
+        border: solid 5px silver;
+        display: grid;
+        grid-template-rows: 80% 20%;
+        grid-template-columns: 25% 35% 25% 15%;
+      }
+
+      article div {
+        background: blueviolet;
+        background-clip: text;
+        -webkit-background-clip: text;
+        color: transparent;
+        padding: 10px;
+        border: solid 1px #ddd;
+      }
+    </style>
+  </head>
+  <body>
+    后盾人
+    <article>
+      <div>1</div>
+      <div>2</div>
+      <div>3</div>
+      <div>4</div>
+      <div>5</div>
+      <div>6</div>
+      <div>7</div>
+      <div>8</div>
+    </article>
     <script>
-
-      const p = new Promise((resolve,reject) =>{
-            resolve(false)
-      }).then(res=>{
-        if(res){
-            console.log('111')
-        }else{
-        //    console.log('222')
-        throw new Error('错误了')
-        //  return Promise.reject('异常')
-        }
-      }).catch(error =>{
-            console.log('error',error)
-      }).finally(()=>{
-        console.log('finally')
-      })
-
- 
-     </script>
-</body>
+      // const p = new Promise((resolve,reject) =>{
+      //       resolve(false)
+      // }).then(res=>{
+      //   if(res){
+      //       console.log('111')
+      //   }else{
+      //   //    console.log('222')
+      //   throw new Error('错误了')
+      //   //  return Promise.reject('异常')
+      //   }
+      // }).catch(error =>{
+      //       console.log('error',error)
+      // }).finally(()=>{
+      //   console.log('finally')
+      // })
+    </script>
+  </body>
 </html>

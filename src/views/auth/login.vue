@@ -34,7 +34,7 @@
               as="div"
               class="hd-error"
             ></ErrorMessage>
-            <button class="hd-button w-full mt-3">登录</button>
+            <FormHdButton class="hd-button w-full mt-3">登录</FormHdButton>
           </Form>
           <div class="text-center">
             <i
@@ -62,9 +62,7 @@
 import { IloginData } from "@/apis/userApi";
 import v from "@/plugins/valitdate";
 import utils from "@/utils";
-import { useRouter } from "vue-router";
- const { Form, Field, ErrorMessage } = v;
- // console.log(route.name)
+const { Form, Field, ErrorMessage } = v;
 const onSubmit = async (values: IloginData) => {
   utils.user.login(values);
 };

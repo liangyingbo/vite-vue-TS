@@ -1,13 +1,13 @@
 import vue from '@vitejs/plugin-vue'
 import { Plugin } from 'vite'
 import { setupMockPlugin } from './mock'
-import { setupElementPlugin } from './element'
+import  autoImport  from './autoImport'
 
 export default function setupPlugins(isBuild: boolean, env: Record<string, any>) {
     const plugins: Plugin[] = [vue()]
 
     
-    setupElementPlugin(plugins)
+    autoImport(plugins)
     plugins.push(setupMockPlugin(isBuild))
 
     return plugins
