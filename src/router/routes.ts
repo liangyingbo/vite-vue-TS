@@ -19,6 +19,11 @@ import { RouteRecordRaw } from "vue-router"
         meta:{guest:true}
     },
     {
+        path:'/article',
+        name:'article',
+        component:() => import("@/views/article.vue"),
+     },
+    {
         path:'/:any(.*)',
 
         name:'NotFound',

@@ -4,32 +4,20 @@
     :class="{ close: menuService.close.value }"
   >
     <div class="logo">
-      <i class="fab fa-joomla text-2xl text-fuchsia-400 mr-2"></i>
-      <span class="text-base text-gray-300">每晚八点直播</span>
+         
+      <icon-home theme="outline"  class="text-2xl text-fuchsia-400 mr-2"/>
+      <span class="text-base text-gray-300">后台管理系统</span>
     </div>
     <div class="container">
-      <!-- <dl
-        class="px-3 py-2"
-        @click="$router.push({ path: '/admin' })"
-        :class="{ 'bg-violet-600  rounded-md': $route.name === 'admin/home' }"
-      >
-        <dt>
-          <div>
-            <i class="fas fa-house-user"></i>
-            <span class="ml-2 text-[14px]">home</span>
-          </div>
-        </dt>
-      </dl> -->
       <dl v-for="(menu, index) of menuService.menus.value" :key="index">
         <dt @click="menuService.toggleMenu(menu)">
-          <div>
-            <i :class="menu.icon" class="text-[15px]"></i>
+          <div class="flex items-center">
+            <component :is="icons[menu.icon!]" size="18" class="text-[15px]" />
             <span class="ml-2 text-[14px]">{{ menu.title }}</span>
           </div>
-          <i
-            class="fas fa-angle-down duration-500"
-            :class="{ 'rotate-180': menu.isClick }"
-          ></i>
+          <icon-up theme="outline"  class="duration-500"
+          :class="{ 'rotate-180': menu.isClick }"
+          />
         </dt>
         <dd
           :class="(!menu.isClick || menuService.close.value) ? 'hidden' : 'block'"
@@ -54,6 +42,7 @@
 import menuService from "@/composables/menu";
 import { watch } from "vue";
 import { useRoute } from "vue-router";
+import * as icons from '@icon-park/vue-next' 
 const route = useRoute();
 watch(route, () => menuService.setCurrentMenu(route), { immediate: true });
 </script>

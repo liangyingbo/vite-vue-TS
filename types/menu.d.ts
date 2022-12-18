@@ -1,6 +1,7 @@
+import {IconType} from '@icon-park/vue-next/es/all'
 export interface Menu {
     title?:string,
-    icon?:string,
+    icon?:IconType,
     isClick?:boolean,
     route?:string,
  }

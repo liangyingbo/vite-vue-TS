@@ -1,3 +1,5 @@
+// import wangEditor from ''
+// import wangEditor from 'wangEditor'
 export default class {
     editor: wangEditor
     constructor(el: string, config: { [key: string]: any }, callback: Function) {

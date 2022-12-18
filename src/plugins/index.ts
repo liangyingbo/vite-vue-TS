@@ -2,12 +2,14 @@ import { App } from "vue";
 import setupElementPlus from "./elementPlusUI";
 import setupPinia from "./pinia";
 import { setupTailWindCssPlugin } from "./tailwindcss";
+import setupIconPark from "./iconpark";
 
 export function setupPlugins(app: App) {
     // autoRegisterComponent(app)
     setupTailWindCssPlugin()
     setupElementPlus(app)
     setupPinia(app)
+    setupIconPark(app)
 }
 
 

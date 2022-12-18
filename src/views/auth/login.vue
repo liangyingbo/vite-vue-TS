@@ -36,10 +36,8 @@
             ></ErrorMessage>
             <FormHdButton class="hd-button w-full mt-3">登录</FormHdButton>
           </Form>
-          <div class="text-center">
-            <i
-              class="fab fa-weixin bg-green-600 text-white rounded-full p-2 mt-3"
-            ></i>
+          <div class="flex justify-center">
+            <icon-wechat theme="outline" size="19" fill="#fff" class="bg-green-600 text-white rounded-full p-2 mt-3"/>
           </div>
         </div>
         <div class="flex gap-2 text-xs text-gray-700 justify-center mt-4 mb-4">

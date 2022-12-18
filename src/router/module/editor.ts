@@ -4,7 +4,7 @@ export default {
     name: 'editor',
     path: '/editor',
     component: () => import('@/layouts/admin.vue'),
-    meta: { menu:{title: '编辑器', icon: 'fas fa-spell-check'} },
+    meta: { menu:{title: '编辑器', icon: 'FileEditing'} },
     children: [
         {
             name: 'editor/markdown',

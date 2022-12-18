@@ -5,7 +5,7 @@ export default {
     path: '/admin',
     redirect: '/admin/home',
     component: () => import('@/layouts/admin.vue'),
-    meta: { auth: true, menu: {title:'home',icon:'fas fa-igloo'} },
+    meta: { auth: true, menu: {title:'home',icon:'DashboardOne'} },
     children: [
         {
             name: 'admin/home',

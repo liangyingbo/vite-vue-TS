@@ -2,6 +2,7 @@ import { createApp } from 'vue'
 import router, { setupRouter } from '@/router'
 import { setupPlugins } from '@/plugins'
 import '@/styles/global.scss'
+import 'animate.css'
 import App from './App.vue'
 
 async function bootstrap() {
